@@ -27,6 +27,8 @@ To just use the binaries, go to \sig-net-example-tid-level-tx\Win32\Debug
 
 ## Revisions
 
+V0.2 1/4/2026
+Sender URI was set to Endpoint = 0 which is illegal. Corrected.
 V0.1 31/3/2026
 First release of the "sig-net-example-tid-level-tx.exe"
 

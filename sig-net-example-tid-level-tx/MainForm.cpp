@@ -74,7 +74,7 @@ __fastcall TFormSigNetTest::TFormSigNetTest(TComponent* Owner)
     keys_valid = false;
     k0_set = false;
     dmx_slot_count = 512;
-    endpoint = 0;
+    endpoint = 1;
     session_id = 1;
     sequence_num = 1;
     message_id = 1;
@@ -98,7 +98,7 @@ __fastcall TFormSigNetTest::TFormSigNetTest(TComponent* Owner)
 
 void __fastcall TFormSigNetTest::FormCreate(TObject *Sender)
 {
-    Caption = "Sig-Net Example [TIDLevel Sender]   Copyright Singularity (UK) Ltd  V0.1";
+    Caption = "Sig-Net Example [TIDLevel Sender]   Copyright Singularity (UK) Ltd  V0.2";
 
     // Initialize K0 display controls (read-only - populated by K0 entry dialog)
     EditK0->ReadOnly = true;
@@ -120,7 +120,8 @@ void __fastcall TFormSigNetTest::FormCreate(TObject *Sender)
     
     // Initialize device parameters
     EditTUID->Text = SigNet::TEST_TUID;
-    SpinEndpoint->Value = 0;
+    SpinEndpoint->MinValue = 1;
+    SpinEndpoint->Value = 1;
     SpinUniverse->MinValue = SigNet::MIN_UNIVERSE;
     SpinUniverse->MaxValue = SigNet::MAX_UNIVERSE;
     SpinUniverse->Value = 1;
@@ -429,7 +430,12 @@ bool TFormSigNetTest::SendPacket()
     
     // Get parameters from UI
     uint16_t universe = SpinUniverse->Value;
-    uint16_t endpoint_val = SpinEndpoint->Value;
+    uint16_t endpoint_val = static_cast<uint16_t>(SpinEndpoint->Value);
+    if (endpoint_val < 1) {
+        endpoint_val = 1;
+        SpinEndpoint->Value = 1;
+        LogMessage("Endpoint adjusted to 1 (minimum allowed).");
+    }
     
     // Build packet
     SigNet::PacketBuffer buffer;

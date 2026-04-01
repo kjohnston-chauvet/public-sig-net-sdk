@@ -103,14 +103,14 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=Singularity (UK) Ltd;FileDescription=$(MSBuildProjectName);FileVersion=0.1.0.2;InternalName=;LegalCopyright=Singularity (UK) Ltd;LegalTrademarks=Sig-Net;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Singularity (UK) Ltd;FileDescription=$(MSBuildProjectName);FileVersion=0.1.0.3;InternalName=;LegalCopyright=Singularity (UK) Ltd;LegalTrademarks=Sig-Net;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1124</VerInfo_Locale>
         <LinkPackageStatics>rtl.lib;vcl.lib;ws2_32.lib;bcrypt.lib;iphlpapi.lib;VclSmp.lib;vclx.lib</LinkPackageStatics>
         <VerInfo_MajorVer>0</VerInfo_MajorVer>
         <VerInfo_MinorVer>1</VerInfo_MinorVer>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
-        <VerInfo_Build>2</VerInfo_Build>
+        <VerInfo_Build>3</VerInfo_Build>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DynamicRTL>false</DynamicRTL>

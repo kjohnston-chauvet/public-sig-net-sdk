@@ -293,9 +293,9 @@ object FormSigNetTest: TFormSigNetTest
         Width = 80
         Height = 22
         MaxValue = 65535
-        MinValue = 0
+        MinValue = 1
         TabOrder = 1
-        Value = 0
+        Value = 1
       end
       object SpinUniverse: TSpinEdit
         Left = 288
