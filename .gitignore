@@ -25,3 +25,10 @@ Win64/
 
 # Delphi/C++Builder backup files
 *.~*
+
+# Keep only the distributable example binary in source control
+!sig-net-example-tid-level-tx/Win32/
+sig-net-example-tid-level-tx/Win32/*
+!sig-net-example-tid-level-tx/Win32/Debug/
+sig-net-example-tid-level-tx/Win32/Debug/*
+!sig-net-example-tid-level-tx/Win32/Debug/sig-net-example-tid-level-tx.exe
