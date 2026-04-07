@@ -1,0 +1,16 @@
+[package]
+name = "sig-net-sdk"
+version = "0.3.0"
+edition = "2021"
+description = "Sig-Net Protocol Framework - Secure CoAP-based DMX512 control protocol library"
+license = "MIT"
+authors = ["Wayne Howell", "Singularity (UK) Ltd."]
+
+[dependencies]
+hmac = "0.12"
+sha2 = "0.10"
+pbkdf2 = { version = "0.12", features = ["hmac"] }
+rand = "0.8"
+
+[dev-dependencies]
+# Tests are built-in via the selftest module
