@@ -32,3 +32,14 @@
 !sig-net-example-tid-level-tx/Win32/Debug/
 sig-net-example-tid-level-tx/Win32/Debug/*
 !sig-net-example-tid-level-tx/Win32/Debug/*.exe
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
